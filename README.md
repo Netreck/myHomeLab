@@ -1,4 +1,4 @@
-# 🧪 Personal Homelab
+#  Personal Homelab
 
 Personal homelab project documentation focused on learning more about computing and using the environment as a server for personal projects.  
 I plan to continuously update this repository as the system evolves and matures.
