@@ -24,8 +24,7 @@ Known issues, ideas for future updates, security improvements, and architectural
 
 - **Hardware upgrade**
   - +2 × 16 GB RAM modules  
-  - Dedicated GPU for AI processing / training  
-    (personal computer already has an RTX 3070 for ML training and finetuning)
+  - Dedicated GPU for AI processing / training 3090 24GB 
 
 - **Migrate personal project currently running on GCP**
   - *HireMatch AI*: a project that simulates / assists ATS systems in resume analysis.
@@ -104,7 +103,7 @@ This section briefly describes the main services running in the Proxmox environm
 - **CPU:** Intel Xeon E5-2680 v4 (LGA 2011-3)  
 - **Memory:** 32 GB DDR4 ECC RDIMM (2×16 GB)  
 - **Storage:** 512 GB NVMe M.2 SSD  
-- **GPU:** NVIDIA GTX 550 Ti  
+- **GPU:** NVIDIA RTX 3070 Ti  
 - **Power Supply:** 750 W  
 
 
