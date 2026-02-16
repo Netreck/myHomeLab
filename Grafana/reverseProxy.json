@@ -530,7 +530,7 @@
       "pluginVersion": "12.3.2",
       "targets": [
         {
-          "expr": "topk(10, sum by (subdomain) (count_over_time({job=\"$job\", host=\"$host\"} | regexp \"\\\\] - \\\\d{3} \\\\d{3} - \\\\w+ https? (?P<subdomain>[^ ]+)\" | subdomain=~\"$domain_re\"[15m])))",
+          "expr": "topk(10, sum by (subdomain) (count_over_time({job=\"$job\", host=\"$host\"} | regexp \"\\\\] - \\\\d{3} \\\\d{3} - \\\\w+ https? (?P<subdomain>[^ ]+)\"[15m])))",
           "format": "table",
           "instant": true,
           "legendFormat": "",
@@ -1033,16 +1033,16 @@
       },
       {
         "current": {
-          "text": ".*",
-          "value": ".*"
+          "text": ".+",
+          "value": ".+"
         },
         "label": "método",
         "name": "method",
         "options": [
           {
             "selected": true,
-            "text": ".*",
-            "value": ".*"
+            "text": ".+",
+            "value": ".+"
           },
           {
             "selected": false,
@@ -1080,21 +1080,21 @@
             "value": "OPTIONS"
           }
         ],
-        "query": ".* ,GET,POST,PUT,DELETE,PATCH,HEAD,OPTIONS",
+        "query": ".+ ,GET,POST,PUT,DELETE,PATCH,HEAD,OPTIONS",
         "type": "custom"
       },
       {
         "current": {
-          "text": ".*",
-          "value": ".*"
+          "text": ".+",
+          "value": ".+"
         },
         "label": "erro/status",
         "name": "err",
         "options": [
           {
             "selected": true,
-            "text": ".*",
-            "value": ".*"
+            "text": ".+",
+            "value": ".+"
           },
           {
             "selected": false,
@@ -1122,18 +1122,18 @@
             "value": "(4..|5..)"
           }
         ],
-        "query": ".* ,404,505,4..,5..,(4..|5..)",
+        "query": ".+ ,404,505,4..,5..,(4..|5..)",
         "type": "custom"
       }
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Reverse Proxy (Nginx) - Loki",
   "uid": "reverse-proxy-clean",
-  "version": 19
+  "version": 27
 }

@@ -1,0 +1,26 @@
+# Grafana Stack (Loki + Prometheus)
+
+Grafana setup in the homelab.
+The goal is to centralize visibility in a single point getting info from logs from all proxmox VMs and lxc.
+
+---
+
+## Stack Overview
+
+- **Grafana**: visualization and dashboards
+- **Loki**: log storage/query engine
+- **Prometheus**: metrics collection
+- **Promtail**: log shipping to Loki
+- **Nginx Proxy Manager (reverse proxy)**: main log source for public traffic
+
+---
+
+## How Data Flows
+
+1. Requests arrive at the reverse proxy.
+2. Proxy logs are shipped by Promtail to Loki.
+3. Grafana reads Loki data to build traffic/error dashboards.
+4. Prometheus collects metrics from monitored targets.
+5. Grafana also uses Prometheus as a metrics datasource.
+
+---
