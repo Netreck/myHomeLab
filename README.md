@@ -29,8 +29,6 @@ Known issues, ideas for future updates, security improvements, and architectural
 - **Migrate personal project currently running on GCP**
   - *HireMatch AI*: a project that simulates / assists ATS systems in resume analysis.
 
- -  **Grafana - Prometheus logs**
-    -  In a LXC use Prometheus for logging and grafana for visualization so I can have better controls over logs besides using proxmenux where is limitated compared to this stack power
 
 ---
 
@@ -76,6 +74,9 @@ This section briefly describes the main services running in the Proxmox environm
 - **Netmaker Client** (LXC)  
   Client responsible for connecting the homelab to the WireGuard VPN network managed by Netmaker.
 
+- **Main Monitor [Grafana]** (LXC)  
+  Granafa,loki, prometheus setup  to centralize logs visualization in a single point.
+
 
 
 ### Virtual Machines (VMs)
@@ -94,7 +95,10 @@ This section briefly describes the main services running in the Proxmox environm
 - Caddy (TLS / HTTPS)  
 - Nginx Proxy Manager  
 - Pi-hole  
-- Cloudflare DNS  
+- Cloudflare DNS
+- Grafana
+- Loki
+- Prometheus
 ---
 
 ## 🖥️ Server Hardware Specifications
